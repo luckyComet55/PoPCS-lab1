@@ -45,7 +45,6 @@ void* mkm_runner(void* t_info) {
 
 int main(int argc, char** argv) {
 
-    srand(time(NULL));
     int thread_count = strtol(argv[1], NULL, 10);
     long total_attempts = strtol(argv[2], NULL, 10);
     pthread_mutex_init(&mtx, NULL);
