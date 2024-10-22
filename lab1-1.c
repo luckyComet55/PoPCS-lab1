@@ -53,8 +53,6 @@ int main(int argc, char** argv) {
     long attempts_per_thread = total_attempts / thread_count;
     long last_thread_attempts = attempts_per_thread;
 
-    printf("total attempts: %ld\nattempts per thread: %ld\n", total_attempts, attempts_per_thread);
-
     if (total_attempts % thread_count != 0) {
         last_thread_attempts += (total_attempts % thread_count);
     }
@@ -89,7 +87,6 @@ int main(int argc, char** argv) {
     double time_end = 0.0;
     GET_TIME(time_end);
 
-    printf("successful results: %ld\n", successful_results);
     double pi_apprx = 4.0 * (double)successful_results / ((double)total_attempts);
 
     printf("approximal PI=%lf\n", pi_apprx);
